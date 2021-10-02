@@ -1,0 +1,94 @@
+1)
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    int a = 0, b = 0, s = 0, p = 0;
+    cout << "Введите значение первой стороны прямоугольника:\n";
+    cout << "a = \t";
+    cin >> a;
+    cout << "Введите значение второй стороны прямоугольника:\n";
+    cout << "b = \t";
+    cin >> b;
+    s = a*b;
+    p = 2*(a+b);
+    cout << "Площадь прямоугольника: S = a*b = " << a << "*" << b << "=" << s << "\n";
+    cout << "Периметр прямоугольника: P = 2*(a+b) = 2*(" << a << "+" << b << ") = " << p;
+}
+
+
+
+2)
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    float d = 0, l = 0, pi = 3.14;
+    cout << "Введите диаметр окружности:\n";
+    cout << " d = \t";
+    cin >> d;
+    l = d*pi;
+    cout << "Длина окружности: L = π * d = 3,14 * " << d << "=" << l;
+}
+
+3)
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    float a = 0, b = 0;
+    cout << "Введите первое число:\n";
+    cout << "a = \t";
+    cin >> a;
+    cout << "Введите второе число:\n";
+    cout << "b = \t";
+    cin >> b;
+    cout << "Среднее арфиметическое двух чисел: (a+b)/2 = (" << a << "+" << b << ")/2 = " << (a+b)/2; 
+}
+
+4)
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    float a = 0, b = 0;
+    cout << "Введите первое число, неравное нулю:\n";
+    cout << "a = \t";
+    cin >> a;
+    cout << "Введите второе число, неравное нулю:\n";
+    cout << "b = \t";
+    cin >> b;
+    cout << "Сумма квадратов чисел: a^2+b^2 = " << pow(a,2)+pow(b,2) << "\n";
+    cout << "Разность квадратов чисел: a^2-b^2  = " << pow(a,2)-pow(b,2) << "\n";
+    cout << "Произведение квадратов чисел: a^2*b^2 = " << pow(a,2)*pow(b,2) << "\n";
+    cout << "Частное квадратов чисел: a^2/b^2 = " << pow(a,2)/pow(b,2);
+}
+
+5)
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    float a = 0, b = 0;
+    cout << "Введите первое число, неравное нулю:\n";
+    cout << "a = \t";
+    cin >> a;
+    cout << "Введите второе число, неравное нулю:\n";
+    cout << "b = \t";
+    cin >> b;
+    cout << "Сумма модулей чисел: |a|+|b| = " << abs(a)+abs(b) << "\n";
+    cout << "Разность модулей чисел: |a|-|b|  = " << abs(a)-abs(b) << "\n";
+    cout << "Произведение модулей чисел: |a|*|b| = " << abs(a)*abs(b) << "\n";
+    cout << "Частное модулей чисел: |a|/|b| = " << abs(a)/abs(b);
+}
