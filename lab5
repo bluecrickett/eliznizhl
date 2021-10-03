@@ -1,0 +1,112 @@
+1)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    double x1=0,y1=0,x2=0,y2=0;
+    cout << "Введите координаты первой точки через пробел:\n";
+    cout << "(x1, y1) = \t";
+    cin >> x1 >> y1;
+    cout << "Введите координаты второй точки через пробел:\n";
+    cout << "(x2, y2) = \t";
+    cin >> x2 >> y2;
+    cout << "Расстояние между двумя точками: d = √((x2-x1)^2+(y2-y1)^2) = " << "√((" << x2 << "-" << x1 << ")^2+(" << y2 << "-" << y1 << ")^2) = " << sqrt(pow(x2-x1,2)+pow(y2-y1,2));  
+}
+
+2)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    double a=0,b=0,c=0;
+    cout << "Введите значение точек A, B, C через пробел:\n";
+    cout << "A, B, C = \t";
+    cin >> a >> b >> c;
+    cout << "Длина отрезка AC = " << abs(a-c) << "\n";
+    cout << "Длина отрезка BC = " << abs(b-c) << "\n";
+    cout << "Сумма длин отрезков AC и BC = " << abs(a-c) + abs(b-c);
+}
+
+3)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    double a=0,b=0,c=0;
+    cout << "Введите значение точек A, B, C через пробел(точка С должна быть расположена между точками А и В):\n";
+    cout << "A, B, C = \t";
+    cin >> a >> b >> c;
+    if (c>a and c<b) {
+        cout << "Произведение длин отрезков AC и BC = " << abs(a-c)*abs(b-c);
+    }
+    else {
+        cout << "Ошибка: точка C не расположена между точками A и В";
+    }
+}
+
+4)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    double x1=0,y1=0,x2=0,y2=0,x3=0,y3=0;
+    cout << "Введите координаты первой точки прямоугольника через пробел:\n";
+    cout << "(x1, y1) = \t";
+    cin >> x1 >> y1;
+    cout << "Введите координаты второй точки прямоугольника через пробел:\n";
+    cout << "(x2, y2) = \t";
+    cin >> x2 >> y2;
+    x3 = x1;
+    y3 = y2;
+    cout << "Периметр прямоугольника: " << 2*abs(y3-y1)+2*abs(x2-x3) << "\n";
+    cout << "Площадь прямоугольника: " << abs(y3-y1)*abs(x2-x3);
+}
+
+5)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "rus");
+    double x1=0,y1=0,x2=0,y2=0,x3=0,y3=0,a=0,b=0,c=0,p=0;
+    cout << "Введите координаты первой точки треугольника через пробел:\n";
+    cout << "(x1, y1) = \t";
+    cin >> x1 >> y1;
+    cout << "Введите координаты второй точки треугольника через пробел:\n";
+    cout << "(x2, y2) = \t";
+    cin >> x2 >> y2;
+    cout << "Введите координаты третьей точки треугольника через пробел:\n";
+    cout << "(x3, y3) = \t";
+    cin >> x3 >> y3;
+    a = sqrt(pow(x2-x1,2)+pow(y2-y1,2));
+    b = sqrt(pow(x3-x2,2)+pow(y3-y2,2));
+    c = sqrt(pow(x3-x1,2)+pow(y3-y1,2));
+    if (a>(b+c) or b>(a+c) or c>(a+b)){
+        cout << "Ошибка: такого треугольника не существует";
+    }
+    else {
+        cout << "Периметр треугольника: " << a+b+c << "\n";
+        p = (a+b+c)/2;
+        cout << "Площадь треугольника: " << sqrt(p*(p-a)*(p-b)*(p-c));
+    }
+}
+
