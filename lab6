@@ -1,0 +1,132 @@
+1)
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    setlocale(0, "rus");
+    double a=0,b=0,c=0;
+    cout << "Введите значение А и B через пробел: \n";
+    cout << "A, B = \t";
+    cin >> a >> b;
+    c = a;
+    a = b;
+    b = c;
+    cout << "A = " << a << " B = " << b;
+}
+
+2)
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    setlocale(0, "rus");
+    double a=0,b=0,c=0,d=0;
+    cout << "Введите значение А, B, C через пробел: \n";
+    cout << "A, B, C = \t";
+    cin >> a >> b >> c;
+    d = a;
+    a = b;
+    b = c;
+    c = d;
+    cout << "A = " << a << " B = " << b << " C = " << c;
+}
+
+3)
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    setlocale(0, "rus");
+    double a=0,b=0,c=0,d=0;
+    cout << "Введите значение А, B, C через пробел: \n";
+    cout << "A, B, C = \t";
+    cin >> a >> b >> c;
+    d = a;
+    a = c;
+    c = b;
+    b = d;
+    cout << "A = " << a << " B = " << b << " C = " << c;
+}
+
+4)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() 
+{
+    setlocale(0, "rus");
+    double x=0;
+    cout << "Найдем значение функции y = 3x^6 − 6x^2 − 7\n";
+    cout << "Введите значение x: \n";
+    cout << "x = \t";
+    cin >> x;
+    cout << "Значение функции y = 3x^6 − 6x^2 − 7 = " << 3*pow(x,6)-6*pow(x,2)-7;
+}
+
+5)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() 
+{
+    setlocale(0, "rus");
+    double x=0;
+    cout << "Найдем значение функции y = 4(x−3)^6 − 7(x−3)^3 + 2\n";
+    cout << "Введите значение x: \n";
+    cout << "x = \t";
+    cin >> x;
+    cout << "Значение функции y = 4(x−3)^6 − 7(x−3)^3 + 2 = " << 4*pow(x-3,6)-7*pow(x-3,3)+2;
+}
+
+6)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() 
+{
+    setlocale(0, "rus");
+    double a=0, b=0;
+    cout << "Найдем значение A^8\n";
+    cout << "Введите значение A: \n";
+    cout << "A = ";
+    cin >> a;
+    b = a*a;
+    b = b*b;
+    b = b*b;
+    cout << "Значение A^8 = " << b;
+}
+
+7)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() 
+{
+    setlocale(0, "rus");
+    double a=0, b=0, c=0;
+    cout << "Найдем значение A^15\n";
+    cout << "Введите значение A: \n";
+    cout << "A = ";
+    cin >> a;
+    b = a*a;//a^2
+    c = a*b;//a^3
+    b = b*c;//a^5
+    c = b;//a^5
+    b = b*b;// a^10
+    c = c*b;// a^15
+    cout << "Значение А^15 = " << c;
+}
