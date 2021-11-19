@@ -1,0 +1,166 @@
+1)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(){
+    setlocale(0,"rus");
+    int a =0, b = 0;
+    cout << "Введите значения A и B через пробел: ";
+    cin >> a >> b;
+    if(a==b){
+        a = 0;
+        b = 0;
+    }
+    else{
+        if (a>b){
+            b = a;
+        }
+        else{
+            a = b;
+        }
+    }
+    cout << "Новые значения A и B: \nA = " << a << "\nB = " << b;
+}
+
+
+2)
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(0,"rus");
+    int a =0, b = 0, c = 0;
+    cout << "Введите значения A, B и С через пробел: ";
+    cin >> a >> b >> c;
+    if (c<=a and c<=b){
+        cout << "Сумма наибольших чисел: " << a+b;
+    }
+    else{
+        if (a<=b and a<=c){
+            cout << "Сумма наибольших чисел: " << b+c;
+        }
+        else{
+            if(b<=a and b<=c){
+        cout << "Сумма наибольших чисел: " << a+c;
+        }
+    }
+    }
+}
+
+3)
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(){
+    setlocale(0,"rus");
+    int a=0, b=0, c=0, ab=0, ac=0;
+    cout << "Введите значения A, B и C через пробел: ";
+    cin >> a >> b >> c;
+    ab = abs(a-b);
+    ac = abs(a-c);
+    cout << "Ближайшая к точке А точка: ";
+    if (ab>ac){
+        cout << "C\n" << "Ее расстояние до точки A = " << ac;
+    }
+    else{
+        cout << "B\n" << "Ее расстояние до точки А = " << ab;
+    }
+}
+
+4)
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    setlocale(0,"rus");
+    int a=0, b=0;
+    cout << "Введите координаты точки: ";
+    cin >> a >> b;
+    if (a<0){
+        if (b<0){
+            cout << "Точка находится в 3-ей четверти";
+        }
+        else{
+            cout << "Точка находится в 2-ой четверти";
+        }
+    }
+    else{
+        if(b<0){
+            cout << "Точка находится во 4-ой четверти";
+        }
+        else{
+            cout << "Точка находится в 1-ой четверти ";
+        }
+    }
+}
+
+5)
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    setlocale(0,"rus");
+    int a=0;
+    cout << "Введите число: ";
+    cin >> a;
+    if (a==0){
+        cout << "Нулевое число";
+        exit(1);
+    }
+    if (a<0){
+        cout << "Отрицательное ";
+    }
+    else{
+        cout << "Положительное ";
+    }
+    if (a%2 == 0){
+        cout << "четное число";
+    }
+    else{
+        cout << "нечетное число";
+    }
+}
+
+6)
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    setlocale(0,"rus");
+    int a=0,b=0;
+    cout << "Введите число(1-999): ";
+    cin >> a;
+    if (a<1 or a>999){
+        cout << "Ошибка! Число не принадлежит заданному промежутку";
+        exit(1);
+    }
+    if (a%2 == 0){
+        cout << "Четное ";
+    }
+    else{
+        cout << "Нечетное ";
+    }
+    while (a!=0){
+        a=a/10;
+        b++;
+    }
+    if (b == 1){
+        cout << "однозначное число";
+    }
+    if (b == 2){
+        cout << "двузначное число";
+    }
+    if (b==3){
+        cout << "трехзначное число";
+    }
+}
