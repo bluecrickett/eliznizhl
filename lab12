@@ -152,3 +152,28 @@ int main(){
             cout << "Ю"; break;
         }
     }
+    
+    
+ 3)    
+    #include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(0,"rus");
+    int a=0;
+    cout << "Введите количество учебных заданий(10-40): "; cin >> a;
+    if(a<10 or a>40){
+        cout << "Ошибка! Число не соответствует заданному промежутку";
+    }
+    switch (a){
+        case 10:
+        cout << "Десять учебных заданий"; break;
+        case 11:
+        cout << "Одиннадцать учебных заданий"; break;
+        case 12:
+        cout << "Двенадцать учебных заданий"; break;
+        case 13:
+        cout << "Тринадцать учебных заданий"; break;
+        case 14:
+        cout << "Четырнадцать учебных заданий"; break;
+    }
