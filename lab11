@@ -52,23 +52,26 @@ int main(){
 
 3)
 
-#include <iostream>
+#include <iostream>//11.3
 #include <math.h>
 using namespace std;
 
 int main(){
     setlocale(0,"rus");
-    int a=0, b=0, c=0, ab=0, ac=0;
-    cout << "Введите значения A, B и C через пробел: ";
-    cin >> a >> b >> c;
-    ab = abs(a-b);
-    ac = abs(a-c);
-    cout << "Ближайшая к точке А точка: ";
-    if (ab>ac){
-        cout << "C\n" << "Ее расстояние до точки A = " << ac;
+    float a1,a2,b1,b2,c1,c2,ab,ac;
+    cout << "Введите координаты точки A: "; cin >> a1 >> a2;
+    cout << "Введите координаты точки В: "; cin >> b1 >> b2;
+    cout << "Введите координаты точки C: "; cin >> c1 >> c2;
+    ab = sqrt(pow(b1-a1,2)+pow(b2-a2,2));
+    ac = sqrt(pow(c1-a1,2)+pow(c2-a2,2));
+    if (ab<ac){
+        cout << "Ближайшая к точке А точка: B \nЕе расстояние до точки A: " << ab; 
     }
-    else{
-        cout << "B\n" << "Ее расстояние до точки А = " << ab;
+    if (ac<ab){
+        cout << "Ближайшая к точке А точка: C \nЕе расстояние до точки A: " << ac;
+    }
+    if (ac==ab){
+        cout << "Расстояние от точек В и С до точки А одинаково \nОно равно: " << ab;
     }
 }
 
