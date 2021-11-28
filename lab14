@@ -1,0 +1,117 @@
+1) 
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(0, "rus");
+    int a,b,i,j;
+    cout << "Введите числа A и B (A<B): "; cin >> a >> b;
+    if (a>b){
+        cout << "Ошибка! Число A больше числа B";
+        exit;
+    }
+    i=a;
+    for (i; i<=b; i++){
+        for(j=0;j<i;j++){
+            cout << i << " ";
+        }
+        cout << "\n";
+    }
+}
+
+2)
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(0, "rus");
+    int a,b,s=0,v;
+    cout << "Введите числа A и B (A>B): "; cin >> a >> b;
+    if (a<b){
+        cout << "Ошибка! Число A меньше числа B";
+        exit;
+    }
+    v = a;
+    while (a>=b){
+        s += b;
+        a -= b;
+    }
+    cout << "Длина незанятой части отрезка A отрезками B: " << v-s;
+}
+
+3)
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(0, "rus");
+    int n,k=0,s=0;
+    cout << "Введите число N(N>1): "; cin >> n;
+    if (n <= 1){
+        cout << "Ошибка! Число N не принадлежит заданному промежутку";
+        exit;
+    }
+    while(s <= n){
+        ++k;
+        s+=k;   
+    }
+    cout << "Наименьшее из целых чисел K, для которых сумма 1 + 2 + ... + K будет больше или равна N:   " << k << "\n";
+    cout << "Сумма: " << s;
+}
+
+4)
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(0, "rus");
+    float p,v=1000,k=0,s=1000;
+    cout << "Введите кол-во процентов P (0<P<25): "; cin >> p;
+    while (v<=1100){
+        s += v*(p/100);
+        v += v*(p/100);
+        k++;
+    }
+    cout << "Кол-во месяцев, через которое размер вклада превысит 1100 руб.: " << k <<"\n";
+    cout << "Итоговый размер вклада: " << s;
+}
+
+5)
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(0, "rus");
+    int a,b,v;
+    cout << "Введите числа А и В: "; cin >> a >> b;
+    while (a!=b){
+        if(a>b){
+            a -= b;
+        }
+        if (b>a){
+            b -= a;
+        }
+    }
+    cout << "НОД чисел А и В, найденный с помощью алгоритма Евклида: " << a;
+}
+
+6)
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(0, "rus");
+    int n, a=0, b1=1,b2=1,k=2;
+    cout << "Введите число N(N>1): "; cin >> n;
+    while (a < n) {
+        k++;
+        a = b1 + b2;
+        b2 = b1;
+        b1 = a;
+    }
+    cout << "Число K — порядковый номер числа Фибоначчи N(первые два числа последовательности - 1 и 1): " << k;
+}
