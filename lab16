@@ -71,4 +71,47 @@ int main(){
 }
 
 4)
+#include <iostream>
+using namespace std;
 
+int main(){
+    int n, i;
+ 
+    cout << "Введите размер массива N: "; cin >> n;
+    int a[n];
+ 
+    for (i=0; i<n; i++){
+        cout << i+1 << " элемент массива: "; cin >> a[i];
+    }
+ 
+    cout << "Вывожу массив, элементы которого в следующем порядке: A1, AN , A2, AN−1, A3, AN−2, ...: \n";
+    for (i=0; i<n/2; ++i){
+            cout << a[i];
+            cout << a[n-i-1];
+    }
+    if (n%2 != 0 ){
+        cout << a[(n/2)];
+    } 
+}
+
+5)
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale(0,"rus");
+    int n, i;
+    cout << "Введите размер массива N: "; cin >> n;
+    int a[n];
+ 
+    for (i=0; i<n; i++){
+        cout << i+1 << " элемент массива: "; cin >> a[i];
+    }
+    cout << "Вывожу вначале элементы массива с нечетными номерами в порядке возрастания номеров, а затем — элементы с четными номерами в порядке убывания номеров: \n";
+    for (i=0; i<n; i+=2){
+            cout << a[i] << " ";
+    }
+    for (i=n-(n%2)-1; i>=1; i-=2){
+            cout << a[i] << " ";
+    }
+}
