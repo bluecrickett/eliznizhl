@@ -3,31 +3,7 @@
 using namespace std;
 
 int main(){
-    int n,i#include <iostream>
-using namespace std;
-
-int main(){
-    int n,i,a,d,z=1;
-    cout << "Введите число N(N>1): "; cin >> n;
-    int arr[n];
-    if (n<=1){
-        cout << "Ошибка! Число N не принадлежит заданному промежутку";
-        exit;
-    }
-    cout << "Введите первый член массива A: "; cin >> a;
-    cout << "Введите знаменатель D геометрической прогрессии: "; cin >> d;
-    for (i=0; i<n; i++){
-        arr[i]=a*z;
-  	    z*=d;
-    }
-    cout << "Массив размера N, содержащий N первых членов данной прогрессии: A,A·D,A·D^2,A·D^3,...: \n";
-    for (i=0; i<n; i++){
-        cout << "arr[" << i << "]=" << arr[i] << "\n";
-    }
-}
-
-3)
-;
+    int n,i;
     cout << "Введите число N(N>0): "; cin >> n;
     int arr[n];
     if (n<=0){
