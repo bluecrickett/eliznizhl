@@ -107,51 +107,51 @@ using namespace std;
 
 int main(){
     setlocale(0,"rus");
-    char c;
-    int n=0;
-    cout << "Введите направление робота (С, Ю, З, В): ";
-    cin >> c;
-    cout << "Посланная роботу команда (1, -1, 0): ";
-    cin >> n;
-    cout << "Направление робота после выполнения команды: ";
-    switch (c){
-        case 'С':
-        switch n{
-            case -1:
-            cout << "В"; break;
+    int a = 0, b = 0;
+    cout << "Определите первоначальное направление робота (1-Север, 2-Юг, 3-Запад, 4-Восток): "; cin >> a;
+    cout << "Введите команду для робота (0 — продолжать движение, 1 — поворот налево, −1 — поворот направо): "; cin >>b;
+    switch(a){
+        case 1:
+        switch(b){
             case 0:
-            cout << "C"; break;
+            cout << "Робот продолжает двигаться на север"; break;
             case 1:
-            cout << "З"; break;
+            cout << "Робот повернул налево и движется на запад"; break;
+            case -1:
+            cout << "Робот повернул направо и движется на восток"; break;
         }
-        case "Ю":
-        switch n{
-            case -1:
-            cout << "З"; break;
+        break;
+        case 2:
+        switch(b){
             case 0:
-            cout << "Ю"; break;
+            cout << "Робот продолжает двигаться на юг"; break;
             case 1:
-            cout << "В"; break;
+            cout << "Робот повернул налево и движется на восток"; break;
+            case -1:
+            cout << "Робот повернул направо и движется на запад"; break;
         }
-        case "В":
-        switch n{
-            case -1:
-            cout << "Ю"; break;
+        break;
+        case 3:
+        switch(b){
             case 0:
-            cout << "В"; break;
+            cout << "Робот продолжает двигаться на запад"; break;
             case 1:
-            cout << "C"; break;
+            cout << "Робот повернул налево и движется на юг"; break;
+            case -1:
+            cout << "Робот повернул направо и движется на север"; break;
         }
-        case "З":
-        switch n{
-            case -1:
-            cout << "С"; break;
+        break;
+        case 4:
+        switch(b){
             case 0:
-            cout << "З"; break;
+            cout << "Робот продолжает двигаться на восток"; break;
             case 1:
-            cout << "Ю"; break;
+            cout << "Робот повернул налево и движется на север"; break;
+            case -1:
+            cout << "Робот повернул направо и движется на юг"; break;
         }
     }
+}
     
     
  3)    
