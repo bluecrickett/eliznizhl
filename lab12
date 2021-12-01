@@ -155,25 +155,87 @@ int main(){
     
     
  3)    
-    #include <iostream>
+#include <iostream>
 using namespace std;
 
 int main(){
     setlocale(0,"rus");
-    int a=0;
+    int a = 0, b = 0;
     cout << "Введите количество учебных заданий(10-40): "; cin >> a;
-    if(a<10 or a>40){
-        cout << "Ошибка! Число не соответствует заданному промежутку";
+    if (a<10 or a>40){
+        cout << "Ошибка! Количество учебных заданий не пренадлежит промежутку"; exit;
     }
-    switch (a){
+    switch(a){
         case 10:
-        cout << "Десять учебных заданий"; break;
+        cout << "Десять "; break;
         case 11:
-        cout << "Одиннадцать учебных заданий"; break;
+        cout << "Одиннадцать "; break;
         case 12:
-        cout << "Двенадцать учебных заданий"; break;
+        cout << "Двенадцать "; break;
         case 13:
-        cout << "Тринадцать учебных заданий"; break;
+        cout << "Тринадцать "; break;
         case 14:
-        cout << "Четырнадцать учебных заданий"; break;
+        cout << "Четырнадцать "; break;
+        case 15:
+        cout << "Пятнадцать "; break;
+        case 16:
+        cout << "Шестнадцать "; break;
+        case 17:
+        cout << "Семнадцать "; break;
+        case 18:
+        cout << "Восемнадцать "; break;
+        case 19:
+        cout << "Девятнадцать "; break;
+        case 20:
+        cout << "Двадцать "; break;
+        case 21:
+        cout << "Двадцать одно "; break;
+        case 22:
+        cout << "Двадцать два "; break;
+        case 23:
+        cout << "Двадцать три "; break;
+        case 24:
+        cout << "Двадцать четыре "; break;
+        case 25:
+        cout << "Двадцать пять "; break;
+        case 26:
+        cout << "Двадцать шесть "; break;
+        case 27:
+        cout << "Двадцать семь "; break;
+        case 28:
+        cout << "Двадцать восемь "; break;
+        case 29:
+        cout << "Двадцать девять "; break;
+        case 30:
+        cout << "Тридцать "; break;
+        case 31:
+        cout << "Тридцать одно "; break;
+        case 32:
+        cout << "Тридцать два "; break;
+        case 33:
+        cout << "Тридцать три "; break;
+        case 34:
+        cout << "Тридцать четыре "; break;
+        case 35:
+        cout << "Тридцать пять "; break;
+        case 36:
+        cout << "Тридцать шесть "; break;
+        case 37:
+        cout << "Тридцать семь "; break;
+        case 38:
+        cout << "Тридцать восемь "; break;
+        case 39:
+        cout << "Тридцать девять "; break;
+        case 40:
+        cout << "Сорок "; break;
     }
+    if ((a>9 and a<21) or (a>24 and a<31) or (a>34 and a<41)){
+        cout << "учебных заданий";
+    }
+    if (a==21 or a==31){
+        cout << "учебное задание";
+    }
+    if ((a>21 and a<25) or (a>31 and a<35)){
+        cout << "учебных задания";
+    }
+}
