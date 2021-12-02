@@ -1,0 +1,18 @@
+1)
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n,k,l,i;
+    
+    cout << "Введите размер массива N: "; cin >> n;
+    int arr[n];
+    cout << "Введите числа К и L (1 ≤ K ≤ L ≤ N): "; cin >> k >> l;
+    cout << "Введите элементы массива: \n";
+    for (i=0; i<n; i++){
+        cout << i+1 << "элемент = "; cin >> arr[i];
+    }
+    cout << "Среднее арифметическое элементов массива, расположенных на " << k << " и " << l << " местах: " << (float)(arr[k]+arr[l])/2; 
+}
+
+2)
