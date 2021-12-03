@@ -45,3 +45,32 @@ int main(void)
 }
 
 3)
+
+#include <stdio.h>
+ 
+int main(void)
+{
+    int a[10];
+    int n;
+ 
+    printf("Введите размер массива N: ");
+    scanf("%i",&n);
+ 
+    printf("Введите элементы массива: \n");
+    int i;
+    for (i=0; i<n; ++i){
+        printf("a[%i] : ",i+1);
+        scanf("%i",&a[i]);
+    }
+ 
+    int min = a[1];
+ 
+    for (i=1; i<n; i+=2) {
+        if (a[i]<min) min=a[i];
+    }
+ 
+    printf("Минимальный элемент из эелементов с четными номерами: ");
+    printf("%i\n",min);
+ 
+    return 0;
+}
