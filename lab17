@@ -101,3 +101,24 @@ int main(){
 
 5)
 
+#include <iostream>
+using namespace std;
+
+int main(){
+    setlocale (0,"rus");
+    int n,i,j;
+    cout << "Введите размер массива N: "; cin >> n;
+    int arr[n];
+    cout << "Введите элементы массива: \n";
+    for (i=0; i<n; i++){
+        cout << i << " элемент = "; cin >> arr[i];
+    }
+    
+    for (i=0; i<n-1; i++){
+        for (j=i+1; j<n; j++){
+            if(arr[i]==arr[j]){
+                cout << "Номера одинаковых элементов: " << i << " и " << j;
+            }
+        }
+    }
+}
