@@ -1,0 +1,56 @@
+1)
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n,i,v;
+    cout << "Введите размер массивов A и B N: "; cin >> n;
+    int arra[n];
+    int arrb[n];
+    cout << "Введите элементы массива A: \n";
+    for (i=0; i<n; i++){
+        cout << i+1 << " элемент = "; cin >> arra[i];
+    }
+    cout << "Введите элементы массива В: \n";
+    for (i=0; i<n; i++){
+        cout << i+1 << " элемент = "; cin >> arrb[i];
+    }
+    for (i=0; i<n; i++){
+        v = arra[i];
+        arra[i] = arrb[i];
+        arrb[i] = v;
+    }
+    cout << "Преобразованный массив А: ";
+    for (i=0; i<n; i++){
+        cout << arra[i] << " ";
+    }
+    cout << "Преобразованный массив В: ";
+    for (i=0; i<n; i++){
+        cout << arrb[i] << " ";
+    }
+}
+
+2)
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n,i,s,k=1;
+    cout << "Введите размер массива A N: "; cin >> n;
+    int arra[n];
+    int arrb[n];
+    cout << "Введите элементы массива A: \n";
+    for (i=0; i<n; i++){
+        cout << i+1 << " элемент = "; cin >> arra[i];
+    }
+    s = arra[0];
+    for (i=0; i<n; i++){
+        arrb[i] = s/k;
+        s += arra[i+1];
+        k += 1;
+    }
+    cout << "Вывожу массив В, где элемент BK равен среднему арифметическому элементов массива A с номерами от 0 до K: \n";
+    for (i=0; i<n; i++){
+        cout << arrb[i] << " ";
+    }
+}
