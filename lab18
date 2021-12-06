@@ -54,3 +54,32 @@ int main(){
         cout << arrb[i] << " ";
     }
 }
+
+3)
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n,i,v;
+    cout << "Введите размер массива N: "; cin >> n;
+    int arr[n];
+    cout << "Введите элементы массива: \n";
+    for (i=0; i<n; i++){
+        cout << i+1 << " элемент = "; cin >> arr[i];
+    }
+    for (i=n; i>=0; i--){
+        if (arr[i]%2!=0){
+            v = arr[i];
+            break;
+        }
+    }
+    for (i=0; i<n; i++){
+        if (arr[i]%2!=0){
+            arr[i] += v;
+        }
+    }
+    cout << "Вывожу массив, где все нечетные числа, содержащиеся в массиве, увеличены на исходное значение последнего нечетного числа: \n";
+    for (i=0; i<n; i++){
+        cout << arr[i] << " ";
+    }
+}
