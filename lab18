@@ -83,3 +83,44 @@ int main(){
         cout << arr[i] << " ";
     }
 }
+
+4)
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n,i,min,max=0,maxi,mini;
+    cout << "Введите размер массива N: "; cin >> n;
+    int arr[n];
+    cout << "Введите элементы массива: \n";
+    for (i=0; i<n; i++){
+        cout << i+1 << " элемент = "; cin >> arr[i];
+    }
+    for (i=0; i<n; i++){
+        if (arr[i]>max){
+            max = arr[i];
+            maxi=i;
+        }
+    }
+    min = max;
+    for (i=0; i<n; i++){
+        if (arr[i]<min){
+            min = arr[i];
+            mini = i;
+        }
+    }
+    if (maxi < mini){
+        for (i=maxi+1; i<mini; i++){
+            arr[i] = 0;
+        }
+    }
+    else{
+        for (i=mini+1; i<maxi; i++){
+            arr[i] = 0;
+        }
+    }
+    cout << "Вывожу массив, где элементы массива, расположенные между его минимальным и максимальным элементами, обнулены: \n";
+    for (i=0; i<n; i++){
+        cout << arr[i] << " ";
+    }
+}
